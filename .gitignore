@@ -6,6 +6,7 @@
 *.fls
 *.out
 *.gz
+*.fdb_latexmk
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
