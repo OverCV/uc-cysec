@@ -5,116 +5,26 @@ from collections import Counter
 import numpy as np
 import urllib.request
 
+from const import (
+    FREC_ESPANOL,
+    PALABRAS_COMUNES_50,
+    BIGRAMAS,
+    TRIGRAMAS,
+)
+
 
 class DecodificadorMonoalfabetico:
     def __init__(self):
         # Frecuencias aproximadas de las letras en castellano (en porcentaje)
-        self.frecuencias_esp = {
-            "E": 13.68,
-            "A": 12.53,
-            "O": 8.68,
-            "L": 8.28,
-            "S": 7.98,
-            "N": 7.01,
-            "D": 5.86,
-            "R": 4.69,
-            "U": 4.63,
-            "I": 4.56,
-            "T": 4.34,
-            "C": 3.96,
-            "P": 2.51,
-            "M": 2.45,
-            "Y": 1.54,
-            "Q": 1.53,
-            "B": 1.42,
-            "H": 1.19,
-            "G": 1.01,
-            "F": 0.69,
-            "V": 0.55,
-            "J": 0.50,
-            "Z": 0.47,
-            "X": 0.13,
-            "K": 0.01,
-            "W": 0.01,
-        }
+        self.frecuencias_esp = FREC_ESPANOL
 
         # Palabras comunes cortas en castellano (2-3 caracteres)
-        self.palabras_comunes = [
-            "DE",
-            "LA",
-            "EL",
-            "EN",
-            "Y",
-            "A",
-            "O",
-            "QUE",
-            "DEL",
-            "LOS",
-            "SE",
-            "LAS",
-            "POR",
-            "UN",
-            "NO",
-            "UNA",
-            "SU",
-            "CON",
-            "ES",
-            "AL",
-            "LO",
-            "SI",
-            "HA",
-            "ME",
-            "TE",
-            "MI",
-            "TU",
-        ]
+        self.palabras_comunes = PALABRAS_COMUNES_50
 
         # Para verificar coherencia, usamos bigramas y trigramas comunes
-        self.bigramas_comunes = [
-            "ES",
-            "DE",
-            "EN",
-            "EL",
-            "LA",
-            "QU",
-            "AR",
-            "NT",
-            "ER",
-            "RA",
-            "ON",
-            "AL",
-            "RE",
-            "CO",
-            "ST",
-            "OR",
-            "AN",
-            "TA",
-            "CA",
-            "TE",
-        ]
+        self.bigramas_comunes = BIGRAMAS
 
-        self.trigramas_comunes = [
-            "QUE",
-            "EST",
-            "CON",
-            "ENT",
-            "LOS",
-            "ARA",
-            "ACI",
-            "NTE",
-            "ION",
-            "ESE",
-            "NTO",
-            "LAS",
-            "RES",
-            "TRA",
-            "PRE",
-            "ERE",
-            "TEN",
-            "FOR",
-            "ORA",
-            "POR",
-        ]
+        self.trigramas_comunes = TRIGRAMAS
 
     def leer_texto_cifrado(self, archivo=None, texto=None):
         """Lee el texto cifrado desde un archivo o directamente como string"""
@@ -268,82 +178,10 @@ class DecodificadorMonoalfabetico:
 
         # Agregamos bigramas y trigramas más comunes en español
         # Bigramas más frecuentes en español
-        bigramas_esp = [
-            "ES",
-            "DE",
-            "EN",
-            "EL",
-            "LA",
-            "QU",
-            "AR",
-            "NT",
-            "ER",
-            "RA",
-            "ON",
-            "AL",
-            "RE",
-            "CO",
-            "ST",
-            "OR",
-            "AN",
-            "TA",
-            "CA",
-            "TE",
-            "CI",
-            "NA",
-            "AS",
-            "DO",
-            "IO",
-            "SE",
-            "OS",
-            "AD",
-            "RO",
-            "TO",
-            "NO",
-            "PO",
-            "AC",
-            "UE",
-            "MA",
-            "UN",
-            "ME",
-            "DI",
-            "PA",
-            "NE",
-        ]
+        bigramas_esp = BIGRAMAS
 
         # Trigramas más frecuentes en español
-        trigramas_esp = [
-            "QUE",
-            "EST",
-            "CON",
-            "ENT",
-            "LOS",
-            "ARA",
-            "ACI",
-            "NTE",
-            "ION",
-            "ESE",
-            "NTO",
-            "LAS",
-            "RES",
-            "TRA",
-            "PRE",
-            "ERE",
-            "TEN",
-            "FOR",
-            "ORA",
-            "POR",
-            "ARA",
-            "ADO",
-            "CIO",
-            "OSA",
-            "DES",
-            "ELA",
-            "ESA",
-            "STA",
-            "ICA",
-            "ADA",
-        ]
+        trigramas_esp = TRIGRAMAS
 
         # Combinamos con los que ya teníamos
         todos_bigramas = set(self.bigramas_comunes + bigramas_esp)
@@ -503,7 +341,9 @@ class DecodificadorMonoalfabetico:
             # Agregamos palabras frecuentes en español
             palabras_frecuentes = ""
             # with open("tests/texto_decifrado.txt", "r", encoding="utf-8") as f:
-            with open("diccionario_espanol.txt", "r", encoding="utf-8") as f:
+            with open(
+                "descifrado/data/diccionario_espanol.txt", "r", encoding="utf-8"
+            ) as f:
                 palabras_frecuentes = f.read().lower()
 
             # Agrega las palabras frecuentes al diccionario
@@ -511,24 +351,6 @@ class DecodificadorMonoalfabetico:
                 palabra = palabra.strip().upper()
                 if palabra:
                     diccionario.add(palabra)
-
-            # Agregamos palabras específicas del contexto que conocemos
-            # palabras_contexto = [
-            #     "ACTUALMENTE",
-            #     "DISPONEMOS",
-            #     "GRAN",
-            #     "CANTIDAD",
-            #     "NAVEGADORES",
-            #     "WEB",
-            #     "PARA",
-            #     "ELEGIR",
-            #     "NUESTRO",
-            #     "CONCEPTOS",
-            #     "COMO",
-            #     "SEGURIDAD",
-            #     "CUMPLIMIENTO",
-            # ]
-            # diccionario.update(palabras_contexto)
 
             print(f"Diccionario interno creado con {len(diccionario)} palabras")
 
@@ -663,7 +485,11 @@ def descifrar_texto(
 
     # Guardar resultado en archivo
     try:
-        with open("resultado_descifrado.txt", "w", encoding="utf-8") as f:
+        with open(
+            "descifrado/output/resultado_descifrado.txt",
+            "w",
+            encoding="utf-8",
+        ) as f:
             f.write("=== RESULTADO DEL DESCIFRADO ===\n")
             f.write(f"Coherencia: {coherencia:.2f}%\n\n")
             f.write("Texto descifrado:\n")
@@ -671,7 +497,7 @@ def descifrar_texto(
             f.write("\n\nMapeo utilizado:\n")
             for k, v in sorted(mapeo.items()):
                 f.write(f"{k} -> {v}\n")
-        print("\nResultado guardado en 'resultado_descifrado.txt'")
+        print("\nResultado guardado en 'descifrado/output/resultado_descifrado.txt'")
     except Exception as e:
         print(f"No se pudo guardar el resultado: {e}")
 
@@ -684,7 +510,7 @@ if __name__ == "__main__":
     caracter_espacio = "n"
     # Texto cifrado de ejemplo
     texto_cifrado = ""
-    with open("tests/texto_cifrado.txt", "r", encoding="utf-8") as f:
+    with open("descifrado/data/texto_cifrado.txt", "r", encoding="utf-8") as f:
         texto_cifrado = (
             f.read()
             .replace(
@@ -698,5 +524,5 @@ if __name__ == "__main__":
     # print(texto_cifrado)
 
     # Descifrar el texto
-    res = descifrar_texto(texto_cifrado, max_iteraciones=20_000)
+    res = descifrar_texto(texto_cifrado, max_iteraciones=25_000)
     print(f"{res=}")
