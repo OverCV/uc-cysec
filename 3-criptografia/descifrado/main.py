@@ -61,9 +61,9 @@ def descifrar_texto(
 # Ejemplo de uso
 if __name__ == "__main__":
     # En el texto cifrado sabemos de antemano que la "n" es el espacio
-    caracter_espacio = "n"
+    caracter_espacio = "i"
 
-    ruta_cifrado = "data/texto_cifrado_7.txt"
+    ruta_cifrado = "data/texto_cifrado_27.txt"
     # ruta_cifrado = "output/resultado_descifrado.txt"
 
     try:
@@ -79,8 +79,11 @@ if __name__ == "__main__":
             )
 
         # Descifrar el texto
-        resultado = descifrar_texto(texto_cifrado, max_iteraciones=30_000)
+        resultado = descifrar_texto(texto_cifrado, max_iteraciones=25_000)
         print(f"Resultado: {resultado}")
+
+        # standar deviation > language statistic
+        # mapping + ciphrated a
 
     except FileNotFoundError:
         print(f"No se encontró el archivo en {ruta_cifrado}")

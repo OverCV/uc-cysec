@@ -7,9 +7,14 @@ PALABRAS_COMUNES_50 = [
     "DE", "LA", "EL", "EN", "Y", "A", "O", "QUE", "DEL", "LOS", "SE", "LAS", "POR", "UN", "NO", "UNA", "SU", "CON", "ES", "AL", "LO", "SI", "HA", "ME", "TE", "MI", "TU",
 ]
 
+MONOGRAMAS = [
+    "Y", "O"
+]
+
 BIGRAMAS = [
     "DE", "LA", "EN", "EL", "ES", "QU", "UE", "AR", "ER", "RA", "ON", "RE", "AL", "CO", "CI", "NT", "OR", "LO", "SE", "LE", "AN", "TI", "TE", "ST", "CA", "TA", "NO", "DO", "OS", "MA", "PA", "PR", "SI", "TR", "MO", "MI", "PO", "NA", "SA", "LI", "PE", "HO", "AM", "HA", "VA", "VI",  "SU",  "YO", "ES", "DE", "EN", "EL", "LA", "QU", "AR", "NT", "ER", "RA", "ON", "AL", "RE", "CO", "ST", "OR", "AN", "TA", "CA", "TE", "CI", "NA", "AS", "DO", "IO", "SE", "OS", "AD", "RO", "TO", "NO", "PO", "AC", "UE", "MA", "UN", "ME", "DI", "PA", "NE",
 ]
+
 TRIGRAMAS = [
     "QUE", "EST", "CON", "ENT", "LOS", "ARA", "ACI", "NTE", "ION", "ESE", "NTO", "LAS", "RES", "TRA", "PRE", "ERE", "TEN", "FOR", "ORA", "POR", "QUE", "EST", "CON", "ENT", "LOS", "ARA", "ACI", "NTE", "ION", "ESE", "NTO", "LAS", "RES", "TRA", "PRE", "ERE", "TEN", "FOR", "ORA", "POR", "ARA", "ADO", "CIO", "OSA", "DES", "ELA", "ESA", "STA", "ICA", "ADA",
 ]
