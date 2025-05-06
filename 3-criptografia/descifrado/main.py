@@ -63,7 +63,7 @@ if __name__ == "__main__":
     # En el texto cifrado sabemos de antemano que la "n" es el espacio
     caracter_espacio = "i"
 
-    ruta_cifrado = "data/texto_cifrado_27.txt"
+    ruta_cifrado = "data/texto_cifrado_6.txt"
     # ruta_cifrado = "output/resultado_descifrado.txt"
 
     try:

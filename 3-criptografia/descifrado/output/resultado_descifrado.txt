@@ -1,40 +1,31 @@
 === RESULTADO DEL DESCIFRADO ===
-Coherencia: 88.97%
+Coherencia: 29.28%
 
 Texto descifrado:
-TAR QUE LOS COmPUTADORES NO PUEDAN APRENDER NI RAzONAR COmO LOS SERES hUmANOSENTRE LOS vILLANOS mAS FRECUENTES DE LA CIENCIA FICCION SE ENCUENTRAN LOS COmPUTADORES QUE PIENSAN DEmASIADO COmO LA NOTORIA hAL DE LA PELICULA  ODISEA DEL ESPACIOPERO EN LA REALIDAD AUN EL SUPERCOmPUTADOR mAS AvANzADO CARECE DE LA CAPACIDAD DE RACIOCINIO DE UN NINOzANvAR ESA HREChA COgNITIvA ENTRE LOS SERES hUmANOS y LAS mAQUINAS CREAR UN COmPUTADOR QUE PUEDA LEER y APRENDER A NIvEL AvANzADO ES EL OHvETIvO AmHICIOSO DE LOS INvESTIgADORES DE LA INTELIgENCIA ARTIFICIALLA AgENCIA DEL PROyECTO DE INvESTIgACION AvANzADA PARA LA DEFENSA DARPA DEL PENTAgONO CONCEDIO UN CONTRATO POR vALOR AL mENOS DE  DOLARES A DOS PROFESORES DEL INSTITUTO POLITECNICO RENSSELAER QUE TRATAN DE CONSTRUIR UNA mAQUINA QUE PUEDA APRENDER mEDIANTE LA LECTURALOS ACADEmICOS ESPERAN CREAR UNA mAQUINA QUE PUEDA LEER PASAvES DE TEvTOS y RESPONDER PREgUNTAS CON HASE EN EL mATERIAL EN EL PROCESO EL PROFESOR SELmER HRINgSvORD CREE QUE DIChAS mAQUINAS DOTADAS DE INTELIgENCIA ARTIFICIAL IA PODRAN LEER PLANES O mANUALES mILITARES y ADAPTARSE AL vUELO EN EL FRAgOR DE LA HATALLATENEmOS AhORA UN APARATO mILITAR TAN COmPLEvO TAN TECNOLOgICO QUE NECESITAmOS LA AyUDA DE LA IA AFIRmO HRINgSvORD DIRECTOR DEL LAHORATORIO DE INTELIgENCIA ARTIFICIAL y RAzONAmIENTO DEL POLITECNICO NO SE PUEDE vOLvER ATRASLA INTELIgENCIA ARTIFICIAL yA ESTA ARRAIgADA EN NUESTRAS vIDAS DESDE LOS PROgRAmAS USADOS POR LOS HANCOS PARA EvALUAR EL CREDITO DTSDDZYFZQY vTNIYSvíSPZIvY FSF mvNYváT QSFNQZmTZvIvPTSBNSK PSvSE LOS SOLICITANTES DE PRESTAmOS hASTA LOS QUE CORRIgEN LA ORTOgRAFIA EN LOS PROCESADORES DE PALAHRAS PASANDO POR LOS PROgRAmAS DE INvESTIgACION QUE EvPLORAN LOS HANCOS DE DATOS EN HUSCA DE ASOCIACIONESPERO LA LECTURA ES DIFICIL PARA LAS mAQUINAS LAS ORACIONES DEHEN SER CONvERTIDAS EN ECUACIONES DE LOgICA FORmAL U OTROS FORmATOS ACCESIHLES PARA ELLAS LOS COmPUTADORES PUEDEN hACERLO EN ESCALA mODESTA PERO LO QUE hA DEmOSTRADO SER mAS ELUSIvO SIN EmHARgO ES UNA PROgRAmACION QUE PUEDA ENCONTRAR LA PUNTA DEL OvILLO EN FRASES FIgURADAS COmO ESTAEL LENgUAvE NATURAL ES mUy AmHIgUO EvPLICO HORIS YATz DEL LAHORATORIO DE INTELIgENCIA ARTIFICIAL DEL mIT SI UNO vA mAS ALLA DE ORACIONES COmO vUAN AmA A mARIA A ALgO COmO UN PARRAFO DEL vALL STREET vOURNAL EL LENgUAvE CONTIENE ALgUNOS FENOmENOS NOTAHLEmENTE COmPLICADOS QUE SON mUy DIFICILES DE REPRESENTARHRINgSvORD y SU COmPANERO YONSTANTINE ARYOUDAS TAmHIEN PROFESOR EN EL POLITECNICO DESEAN CREAR ALgORITmOS O FORmULAS mATEmATICAS QUE PERmITAN A SU mAQUINA LISTA PARA LEER CONvERTIR LAS ORACIONES EN ENUNCIADOS DE LOgICA FORmAL EL PASO SIgUIENTE SERIA CREAR UN vUEgO ADICIONAL DE ALgORITmOS QUE PERmITAN A LA mAQUINA USAR LA INFORmACION QUE AHSORHE PARA INTERPRETARLA EN OTRAS PALAHRAS RAzONARPOR EvEmPLO SI LA mAQUINA LEE SOHRE LOS PLANETAS DEHE ADQUIRIR LA CAPACIDAD DE RESPONDER A LA PREgUNTA CUAL ES EL PLANETA mAS gRANDE AUNQUE EL TEvTO NUNCA mENCIONE EvPLICITAmENTE QUE ES vUPITER
+m h % ( ( m f l v ^ a r $ r l * a ^ n $ f ^ v a c m a ^ l * r l $ f r m a ^ l %b ! a r * a c ^ f c m a r ^ $ m * ( * o a r   % ^ c $ ^ f r m % h r % ^ q h a d* l % ^ n m % ! * a ^   * h * q *   % ^ a ^ ! f n $ f r % c ^   * c ! % c * m *í % c ^ l % b % ^ !   a c ^ ! a h a ^ ( a ^ l h f a l * % r ^   f ^ d $ m $ h %c ^ b %   f ( % c ^ # a c a   % c ^ f r ^ ( * r $ ) ^ í f * r m f ^   f ^ f c ma c ^ l % b ! a r * a c ^ c % r ^ d a # h * l a r m f c ^   f ^ m f ( f d % r %c ^ b % í * ( f c ^ a ( q $ r a c ^   f ^ f ( ( a c ^ * b ! % h m a r m f c ^ va c m a ^ a v % h a ^ f ( ^ ! a ! f ( ^   f ^ ( * r $ ) ^ f r ^ ( % c ^   * c !% c * m * í % c ^   f ^ b a r % ^ v a ^ c *   % ^ ! % l % ^ b a c ^ n $ f ^ a rf l   % m * l % ^ % ^ h f c *   $ a ( ^ ! f c f ^ a ^ ( a ^ # $ f r a ^ ! h f rc a ^   f ^ a ! a h a m % c ^ l % b % ^ ( % c ^   f ^ ( a ^ q a b a ^ o a $ h $c ^   f ^ c v a h ! ^ ( a ^ # $ f r a ^ a l % q *   a ^ l % r c f q $ *   a ^ !% h ^ $ r a ^ * r * l * a m * í a ^ l % b % ^ f ( ^ c * b ! $ m f h ^ % ^ ( a ^b a c ^ h f l * f r m f ^ !   a ^   f ^ % ( @ b ! $ c ^ n $ f ^ ! $ f   f ^ d $r l * % r a h ^ l % r ^ u * r   % u c ^ l f ^ % ^ ( * r $ ) ^ ( a ^ l $ % m a ^  f ^ b f h l a   % ^ l % r c f q $ *   a ^ ! % h ^ f ( ^ c * c m f b a ^ % ! fh a m * í % ^   f ( ^ ! * r q * r % ^ f c ^ b $ @ ^ ! f n $ f r a ^ ( % c ^ c *c m f b a c ^ % ! f h a m * í % c ^ m h a   * l * % r a ( f c ^ l % b % ^ c % r^ ! a ( b ^ % c ^ @ ^ u * r   % u c ^ l f ^ f r ^ f ( ^ b $ r   % ^   f ^ ( a c^ !   a c ^ @ ^ c @ b # * a r ^ k $ r m % ^ a ^ ( a c ^ í f h c * % r f c ^ a  a ! m a   a c ^   f ^ ( % c ^   % c ^ a r m f h * % h f c ^ f r ^ f ( ^ b $ r  % ^   f ^ ( a ^ m f ( f d % r * a ^ b % í * ( ^ l % r m * r $ a r ^   % b * r adonnel me ul ídqslovgoaestl mom  kvqlájd uomquekde: stadozq o.  aopor   % ^ f ( ^ b f h l a   % r % ^ % # c m a r m f ^ @ ^ c * ^ v a l f b % c ^ la c % ^   f ^ ( a ^ * r d % h b a l * % r ^   a   a ^ a ^ l % r % l f h ^ ! % h^ m h % ( ( m f l v ^ l % b ! a r * a ^ l h f a   % h a ^   f ^ ( a c ^ ( * # hf h * a c ^ n m ^ # a c f ^   f ( ^ f r m % h r % ^   f ^ f c l h * m % h * % ^s   f ^ ( a ^ c * m $ a l * % r ^ ! h % r m % ^ ! %   h * a ^ l a b # * a h f r^ $ r a ^ r % m a ^   f ^ ! h f r c a ^ ! $ # ( * l a   a ^ f r ^ c $ ^ u f # c* m f ^   * l v a ^ l % b ! a r * a ^ v a l f ^ a ( a h   f ^   f ^ n $ f ^ b ac ^   f ^ l * r l $ f r m a ^ f b ! h f c a c ^ f c m a r ^   f c a h h % ( ( ar   % ^ f ( ^ c % d m u a h f ^ ! a h a ^ c $ c ^ a ! a h a m % c ^ b % í * ( fc ^ # a c a r   % c f ^ f r ^ ( * r $ ) ^ @ ^ f r ^ c $ ^ f r m % h r % ^ q h ad * l % ^ ! a h a ^ ! f n $ f r % c ^   * c ! % c * m * í % c ^ n m % ! * a ^ n$ f ^ f c ^ a ^ ( a ^ í f o ^ $ r a ^ ! ( a m a d % h b a ^ ! a h a ^ ! h % q ha b a l * % r f r m h f ^ f c m a ^ l * r l $ f r m f r a ^   f ^ l % b ! a r *a c ^ c f ^ f r l $ f r m h a r ^ í f * r m f ^ h f ( a l * % r a   a c ^ l % r^ ( a ^ m f ( f d % r * a ^ b % í * ( ^ l % r ^ a ( q $ r % c ^ r % b # h f c ^* b ! % h m a r m f c ^ f r m h f ^ f ( ( a c ^ c a b c $ r q ^ l % r ^ ( a ^ l$ a ( ^ c f ^ ! h f c f r m % ^ f r ^ f ( ^ q c b ^   f ^ l a r r f c ^ f ( ^ !h * b f h ^ c b a h m ! v % r f ^ $ b m c f   q f ^   $ a ( ^ d $ r l * % r a r  % ^ # a k % ^ ( * r $ ) ^ ! v * ( * ! c ^ c f b * l % r   $ l m % h c ^   f ^b % b f r m % ^ ! a h f l f ^ n $ f ^ r % ^ f r ^ m f ( f d % r % c ^ ! a h a ^f ( ^ $ c $ a h * % ^ d * r a ( ^ ! f h % ^ c * ^ f r ^ c $ c ^ ! ( a m a d % hb a c ^   f ^   f c a h h % ( ( % ^ f ( ^ h f c m % ^ f c ^ l $ f c m * % r ^  f ^ m * f b ! % ^ b % m % h % ( a ^ b %   f ( % c ^ f ^ @ ^ a ^ @ ^ m f ) a c ^* r c m h $ b f r m c ^ ( * r $ ) ^ @ ^ n m % ! * a ^   * c ! % r * # ( f c ^ !a h a ^ c $ c ^ ! h % l f c a   % h f c ^ % b a ! ^ l % h a o % r ^ n $ f ^ ( am f ^ f r ^ b $ l v % c ^   f ^ ( % c ^ m f ( f d % r % c ^ b % í * ( f c ^ % ^!   a c ^ a l m $ a ( f c ^ r a m $ h a ( b f r m f ^ v a @ ^ % m h a c ^ b a hl a c ( a c ^ í f r m a k a c ^ n $ f ^ f ( ^ c * c m f b a ^ % ! f h a m * í %^   f ( ^ ! * r q * r % ^ ! $ f   f ^ a ! % h m a h ^ a ^ f c m % c ^ d a # h *l a r m f c ^ c % r ^ ( a c ^ b * c b a c ^ n $ f ^ a ^ $ r ^ $ c $ a h * % ^  f ^ ! l ^   * c ! % r * # * ( *   a   ^   f ( ^ l %   * q % ^ d $ f r m f ^   f( ^ c * c m f b a ^ r % ^ v a l f ^ d a ( m a ^ ( * l f r l * a h ( % ^ q h a m$ *   a   ^ @ ^ ( * # f h m a   ^   f ^ $ c % 
 
-gapeo utilizado:
-! -> U
-# -> O
-$ -> g
-% -> R
-( -> E
-) -> h
-* -> v
-. -> K
-: -> v
-@ -> z
-^ -> A
-a -> S
-b -> C
-c -> Q
-d -> F
-e -> Z
+Mapeo utilizado:
+a -> o
+b -> r
+c -> u
+d -> m
+e -> e
 f -> v
-g -> I
-h -> L
-j -> H
-k -> v
-l -> D
-m -> v
-n -> m
-o -> N
-p -> v
-q -> y
-r -> Y
-s -> P
-t -> T
-u -> v
-v -> B
-z -> v
+g -> s
+h -> f
+j -> b
+k -> c
+l -> n
+m -> á
+n -> k
+o -> q
+p -> í
+q -> h
+r -> l
+s -> a
+t -> d
+u -> t
+v -> z
+z -> p
+á -> j
+í -> g
