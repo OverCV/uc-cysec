@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     ruta_cifrado = "data/texto_cifrado_27.txt"
     # ruta_cifrado = "output/resultado_descifrado.txt"
-    
+
     try:
         with open(ruta_cifrado, "r", encoding="utf-8") as f:
             texto_cifrado = (
