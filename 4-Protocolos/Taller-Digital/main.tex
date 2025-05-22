@@ -1,0 +1,234 @@
+\documentclass[12pt,a4paper]{article}
+
+% Paquetes esenciales para artículos de Ciberseguridad
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{listings}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,fit,backgrounds,calc}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.16}
+
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{mdframed}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{authblk} % Para gestionar autores y afiliaciones de manera sencilla
+
+\usepackage[spanish]{babel} % idioma en español
+
+
+% Definición de colores para ciberseguridad
+\definecolor{alertred}{RGB}{235,54,42}
+\definecolor{warningyellow}{RGB}{250,190,40}
+\definecolor{securegreen}{RGB}{46,204,113}
+\definecolor{infoblue}{RGB}{52,152,219}
+\definecolor{vulnerablepurple}{RGB}{155,89,182}
+\definecolor{codegray}{RGB}{240,240,240}
+\definecolor{commentgreen}{RGB}{63,127,95}
+\definecolor{codeblue}{RGB}{0,0,255}
+\definecolor{codered}{RGB}{176,0,0}
+\definecolor{cryptogreen}{RGB}{0,128,0}
+\definecolor{encryptionbg}{RGB}{245,245,245}
+
+% Configuración para listings con soporte mejorado para bash
+\lstdefinelanguage{Bash}{
+  keywords={if, then, else, elif, fi, for, do, done, while, until, case, esac, function},
+  keywordstyle=\color{blue},
+  sensitive=true,
+  comment=[l]{\#},
+  commentstyle=\color{commentgreen},
+  stringstyle=\color{red!70!black},
+  morestring=[b]",
+  morestring=[b]'
+}
+
+% Definición para código fuente genérico incluyendo lenguajes de programación comunes
+\lstdefinestyle{codestyle}{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{codered},
+    commentstyle=\color{commentgreen},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=5pt,
+    frame=single,
+    backgroundcolor=\color{codegray},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4,
+    captionpos=b,
+    literate=
+        {\$}{{{\color{codeblue}\$}}}1
+        {>}{{{\color{codered}\textgreater}}}1
+        {<}{{{\color{codered}\textless}}}1
+        {|}{{{\color{codered}|}}}1
+        {&}{{{\color{codered}\&}}}1
+}
+
+% Definición para mostrar algoritmos criptográficos o pseudocódigo
+\lstdefinestyle{cryptoalgo}{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{cryptogreen}\bfseries,
+    stringstyle=\color{codered},
+    commentstyle=\color{commentgreen}\itshape,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=5pt,
+    frame=single,
+    backgroundcolor=\color{encryptionbg},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4,
+    captionpos=b,
+    emphstyle=\color{blue},
+    emph={permutación, expansión, sustitución, rotación, desplazamiento, cifrado, descifrado, bloque, ronda, clave}
+}
+
+\lstset{style=codestyle}
+
+% Estilos para bloques de alerta de seguridad
+\newmdenv[
+  linecolor=alertred,
+  backgroundcolor=alertred!10,
+  frametitle={Alerta de Seguridad},
+  frametitlebackgroundcolor=alertred!40,
+  frametitlefont=\bfseries\color{white},
+  roundcorner=4pt
+]{securityalert}
+
+\newmdenv[
+  linecolor=warningyellow,
+  backgroundcolor=warningyellow!10,
+  frametitle={Advertencia},
+  frametitlebackgroundcolor=warningyellow!40,
+  frametitlefont=\bfseries\color{black},
+  roundcorner=4pt
+]{securitywarning}
+
+\newmdenv[
+  linecolor=securegreen,
+  backgroundcolor=securegreen!10,
+  frametitle={Buena Práctica},
+  frametitlebackgroundcolor=securegreen!40,
+  frametitlefont=\bfseries\color{white},
+  roundcorner=4pt
+]{securitygoodpractice}
+
+% Definición para métodos criptográficos
+\newmdenv[
+  linecolor=infoblue,
+  backgroundcolor=infoblue!5,
+  frametitle={Método Criptográfico},
+  frametitlebackgroundcolor=infoblue!40,
+  frametitlefont=\bfseries\color{white},
+  roundcorner=4pt
+]{cryptomethod}
+
+% Definición para análisis criptográfico
+\newmdenv[
+  linecolor=vulnerablepurple,
+  backgroundcolor=vulnerablepurple!5,
+  frametitle={Análisis Criptográfico},
+  frametitlebackgroundcolor=vulnerablepurple!40,
+  frametitlefont=\bfseries\color{white},
+  roundcorner=4pt
+]{cryptoanalysis}
+
+% Definición de BibTeX
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\title{\LARGE \textbf{Laboratorio: Protocolos Seguros y Seguridad Perimetral}}
+\author{Nombre del Estudiante}
+\date{\today}
+
+\maketitle
+
+\section{Introducción}
+% Aquí contextualizas objetivos y alcance del laboratorio.
+
+\section{1. Configurar y desplegar un Web Server Seguro TLS/SSL}
+\subsection{1.1 Mediante OpenSSL + Apache}
+\subsubsection{1.1.1 Generación de certificados}
+% Describe pasos de generación de certificados y configuración de Apache.
+
+\subsubsection{1.1.2 Configuración de Apache}
+% Describe pasos de configuración de Apache.
+
+\subsection{1.2 Mediante código}
+\subsubsection{1.2.1 Esquema de servidor Node.js}
+% Esquema de servidor HTTPS en tu lenguaje preferido.
+
+\subsubsection{1.2.2 Esquema de servidor Python}
+% Esquema de servidor HTTPS en tu lenguaje preferido.
+
+\subsubsection{1.2.3 Esquema de servidor Java}
+% Esquema de servidor HTTPS en tu lenguaje preferido.
+
+
+
+\section{2. Firma y verificación de documentos con PGP}
+\subsection{2.1 Firma de un documento}
+\subsubsection{2.1.1 Generación de clave}
+% Uso de GnuPG CLI o librería Python.
+
+\subsubsection{2.1.2 Firma con GnuPG}
+% Ejemplo mínimo de firma.
+
+\subsection{2.2 Verificación de firma}
+\subsubsection{2.2.1 Proceso de verificación}
+% Comandos o llamadas a la API de GnuPG.
+
+\subsection{2.3 Cifrado y descifrado con la lib de GnuPG en Python}
+\subsubsection{2.3.1 Ejemplo de cifrado}
+% Ejemplo mínimo de cifrado.
+
+\subsubsection{2.3.2 Ejemplo de descifrado}
+% Ejemplo mínimo de descifrado.
+
+\section{3. Entorno de filtrado de paquetes con IPTABLES / UFW}
+\subsection{3.1 IPTABLES}
+\subsubsection{3.1.1 Regla para Servicio A}
+% Define reglas para al menos 3 servicios o protocolos.
+
+\subsubsection{3.1.2 Regla para Servicio B}
+% Define reglas para al menos 3 servicios o protocolos.
+
+\subsection{3.2 UFW}
+\subsubsection{3.2.1 Regla para Servicio C}
+% Define reglas para al menos 3 servicios o protocolos.
+
+\section{4. Despliegue de un IDS con Snort}
+\subsection{4.1 Instalación de Snort}
+% Instalación de Snort.
+
+\subsection{4.2 Configuración de reglas}
+\subsubsection{4.2.1 Ejemplo de regla de detección}
+% Configuración de reglas para Snort.
+
+\subsection{4.3 Prueba de detección}
+\subsubsection{4.3.1 Simulación de ataque}
+% Prueba de detección de Snort.
+
+\section{Conclusiones}
+% Reflexiones finales y aprendizajes.
+
+\end{document}
+
