@@ -156,75 +156,82 @@
 \begin{document}
 
 \title{\LARGE \textbf{Laboratorio: Protocolos Seguros y Seguridad Perimetral}}
-\author{Nombre del Estudiante}
-\date{\today}
 
+\author{\textbf{Profesor Gustavo Adolfo Echeverri\\}}
+\author[1]{Juan Carlos Charfuelan Caipe}
+\author[2]{Fabian Alberto Guancha Vera}
+\author[3]{Over Haider Castrillón Valencia}
+
+
+\affil[1]{Departamento de Ingeniería en Sistemas y Computación, Universidad de Caldas}
+\affil{Manizales, Colombia}
+\date{\today}
 \maketitle
 
-\section{Introducción}
+\section*{Introducción}
 % Aquí contextualizas objetivos y alcance del laboratorio.
 
-\section{1. Configurar y desplegar un Web Server Seguro TLS/SSL}
-\subsection{1.1 Mediante OpenSSL + Apache}
-\subsubsection{1.1.1 Generación de certificados}
+\section{Configurar y desplegar un Web Server Seguro TLS/SSL}
+\subsection{Mediante OpenSSL + Apache}
+\subsubsection{Generación de certificados}
 % Describe pasos de generación de certificados y configuración de Apache.
 
-\subsubsection{1.1.2 Configuración de Apache}
+\subsubsection{Configuración de Apache}
 % Describe pasos de configuración de Apache.
 
-\subsection{1.2 Mediante código}
-\subsubsection{1.2.1 Esquema de servidor Node.js}
+\subsection{Mediante código}
+\subsubsection{Esquema de servidor Node.js}
 % Esquema de servidor HTTPS en tu lenguaje preferido.
 
-\subsubsection{1.2.2 Esquema de servidor Python}
+\subsubsection{Esquema de servidor Python}
 % Esquema de servidor HTTPS en tu lenguaje preferido.
 
-\subsubsection{1.2.3 Esquema de servidor Java}
+\subsubsection{Esquema de servidor Java}
 % Esquema de servidor HTTPS en tu lenguaje preferido.
 
 
 
-\section{2. Firma y verificación de documentos con PGP}
-\subsection{2.1 Firma de un documento}
-\subsubsection{2.1.1 Generación de clave}
+\section{Firma y verificación de documentos con PGP}
+\subsection{Firma de un documento}
+\subsubsection{Generación de clave}
 % Uso de GnuPG CLI o librería Python.
 
-\subsubsection{2.1.2 Firma con GnuPG}
+\subsubsection{Firma con GnuPG}
 % Ejemplo mínimo de firma.
 
-\subsection{2.2 Verificación de firma}
-\subsubsection{2.2.1 Proceso de verificación}
+\subsection{Verificación de firma}
+\subsubsection{Proceso de verificación}
 % Comandos o llamadas a la API de GnuPG.
 
-\subsection{2.3 Cifrado y descifrado con la lib de GnuPG en Python}
-\subsubsection{2.3.1 Ejemplo de cifrado}
+\subsection{Cifrado y descifrado con la lib de GnuPG en Python}
+\subsubsection{Ejemplo de cifrado}
 % Ejemplo mínimo de cifrado.
 
-\subsubsection{2.3.2 Ejemplo de descifrado}
+\subsubsection{Ejemplo de descifrado}
 % Ejemplo mínimo de descifrado.
 
-\section{3. Entorno de filtrado de paquetes con IPTABLES / UFW}
-\subsection{3.1 IPTABLES}
-\subsubsection{3.1.1 Regla para Servicio A}
+\section{Entorno de filtrado de paquetes con IPTABLES / UFW}
+\subsection{IPTABLES}
+\subsubsection{Regla para Servicio A}
 % Define reglas para al menos 3 servicios o protocolos.
 
-\subsubsection{3.1.2 Regla para Servicio B}
+\subsubsection{Regla para Servicio B}
 % Define reglas para al menos 3 servicios o protocolos.
 
-\subsection{3.2 UFW}
-\subsubsection{3.2.1 Regla para Servicio C}
+\subsection{UFW}
+\subsubsection{Regla para Servicio C}
 % Define reglas para al menos 3 servicios o protocolos.
 
-\section{4. Despliegue de un IDS con Snort}
-\subsection{4.1 Instalación de Snort}
+\section{Despliegue de un IDS con Snort}
+\subsection{Instalación de Snort}
 % Instalación de Snort.
 
-\subsection{4.2 Configuración de reglas}
-\subsubsection{4.2.1 Ejemplo de regla de detección}
+\subsection{Configuración de reglas}
+\subsubsection{Ejemplo de regla de detección}
 % Configuración de reglas para Snort.
 
-\subsection{4.3 Prueba de detección}
-\subsubsection{4.3.1 Simulación de ataque}
+\subsection{Prueba de detección}
+\subsubsection{Simulación de ataque}
 % Prueba de detección de Snort.
 
 \section{Conclusiones}
@@ -232,3 +239,6 @@
 
 \end{document}
 
+
+
+sudo snort -dev -i eth0 -c \etc
