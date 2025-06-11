@@ -13,6 +13,7 @@
 \usepackage{multirow}
 \usepackage{siunitx}
 \usepackage{listings}
+\usepackage{float}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning,fit,backgrounds,calc}
@@ -145,7 +146,6 @@
 \author[2]{Fabian Alberto Guancha Vera}
 \author[3]{Over Haider Castrillón Valencia}
 
-
 \affil[1]{Departamento de Ingeniería en Sistemas y Computación, Universidad de Caldas}
 \affil[Manizales, Colombia}
 \date{\today}
@@ -160,12 +160,13 @@ Este laboratorio presenta la implementación de una suite completa de cifrado ut
 \section{Configuración del Entorno}
 
 \subsection{Requisitos del Sistema}
-Para ejecutar las implementaciones presentadas en este laboratorio, se requiere:
+Para ejecutar las implementaciones presentadas en este laboratorio, se
+requiere:
 
 \begin{itemize}
-	\item Python 3.8 o superior
-	\item Bibliotecas criptográficas: \texttt{cryptography}, \texttt{pycryptodome}
-	\item Sistema operativo: Windows, Linux o macOS
+    \item Python 3.8 o superior
+    \item Bibliotecas criptográficas: \texttt{cryptography}, \texttt{pycryptodome}
+    \item Sistema operativo: Windows, Linux o macOS
 \end{itemize}
 
 \subsection{Instalación de Dependencias}
@@ -175,7 +176,7 @@ pip install cryptography pycryptodome
 \end{lstlisting}
 
 \begin{securitygoodpractice}
-	Se recomienda utilizar un entorno virtual de Python para aislar las dependencias del proyecto y evitar conflictos con otros paquetes instalados en el sistema.
+    Se recomienda utilizar un entorno virtual de Python para aislar las dependencias del proyecto y evitar conflictos con otros paquetes instalados en el sistema.
 \end{securitygoodpractice}
 
 \newpage
@@ -184,20 +185,22 @@ pip install cryptography pycryptodome
 
 \subsection{Fundamentos Teóricos}
 
-Un resumen digital o función hash criptográfica es una función matemática que convierte datos de entrada de longitud arbitraria en una salida de longitud fija. Las propiedades fundamentales incluyen:
+Un resumen digital o función hash criptográfica es una función matemática que
+convierte datos de entrada de longitud arbitraria en una salida de longitud
+fija. Las propiedades fundamentales incluyen:
 
 \begin{itemize}
-	\item \textbf{Determinista}: La misma entrada siempre produce la misma salida
-	\item \textbf{Eficiencia computacional}: Rápida de calcular
-	\item \textbf{Resistencia a preimagen}: Computacionalmente infactible encontrar una entrada que produzca un hash específico
-	\item \textbf{Resistencia a colisiones}: Extremadamente difícil encontrar dos entradas diferentes que produzcan el mismo hash
-	\item \textbf{Efecto avalancha}: Pequeños cambios en la entrada producen cambios significativos en la salida
+    \item \textbf{Determinista}: La misma entrada siempre produce la misma salida
+    \item \textbf{Eficiencia computacional}: Rápida de calcular
+    \item \textbf{Resistencia a preimagen}: Computacionalmente infactible encontrar una entrada que produzca un hash específico
+    \item \textbf{Resistencia a colisiones}: Extremadamente difícil encontrar dos entradas diferentes que produzcan el mismo hash
+    \item \textbf{Efecto avalancha}: Pequeños cambios en la entrada producen cambios significativos en la salida
 \end{itemize}
 
 \subsection{Implementación}
 
 \begin{cryptomethod}
-	La implementación utiliza múltiples algoritmos de hash para demostrar las diferencias en longitud de salida y aplicaciones prácticas.
+    La implementación utiliza múltiples algoritmos de hash para demostrar las diferencias en longitud de salida y aplicaciones prácticas.
 \end{cryptomethod}
 
 \begin{lstlisting}[caption=Implementación de funciones hash criptográficas]
@@ -312,17 +315,17 @@ if __name__ == "__main__":
 \end{lstlisting}
 
 \begin{securitywarning}
-	MD5 y SHA-1 ya no se consideran seguros para aplicaciones criptográficas debido a vulnerabilidades conocidas. Se recomienda usar SHA-256 o superior para aplicaciones que requieren seguridad.
+    MD5 y SHA-1 ya no se consideran seguros para aplicaciones criptográficas debido a vulnerabilidades conocidas. Se recomienda usar SHA-256 o superior para aplicaciones que requieren seguridad.
 \end{securitywarning}
 
 \subsection{Análisis de Seguridad}
 
 \begin{cryptoanalysis}
-	Los algoritmos hash modernos como SHA-256 y SHA-3 proporcionan seguridad robusta contra ataques conocidos. La longitud de salida determina la resistencia a ataques de fuerza bruta:
-	\begin{itemize}
-		\item SHA-256: $2^{256}$ posibles salidas
-		\item SHA-512: $2^{512}$ posibles salidas
-	\end{itemize}
+    Los algoritmos hash modernos como SHA-256 y SHA-3 proporcionan seguridad robusta contra ataques conocidos. La longitud de salida determina la resistencia a ataques de fuerza bruta:
+    \begin{itemize}
+        \item SHA-256: $2^{256}$ posibles salidas
+        \item SHA-512: $2^{512}$ posibles salidas
+    \end{itemize}
 \end{cryptoanalysis}
 
 \newpage
@@ -331,20 +334,21 @@ if __name__ == "__main__":
 
 \subsection{Fundamentos Teóricos}
 
-La firma digital es un esquema matemático que demuestra la autenticidad de un mensaje digital. Proporciona:
+La firma digital es un esquema matemático que demuestra la autenticidad de un
+mensaje digital. Proporciona:
 
 \begin{itemize}
-	\item \textbf{Autenticación}: Verifica la identidad del firmante
-	\item \textbf{Integridad}: Garantiza que el mensaje no ha sido alterado
-	\item \textbf{No repudio}: El firmante no puede negar haber firmado el mensaje
+    \item \textbf{Autenticación}: Verifica la identidad del firmante
+    \item \textbf{Integridad}: Garantiza que el mensaje no ha sido alterado
+    \item \textbf{No repudio}: El firmante no puede negar haber firmado el mensaje
 \end{itemize}
 
 El proceso involucra:
 \begin{enumerate}
-	\item Generación de un par de claves (pública y privada)
-	\item Creación de un hash del mensaje
-	\item Cifrado del hash con la clave privada (firma)
-	\item Verificación descifrando con la clave pública
+    \item Generación de un par de claves (pública y privada)
+    \item Creación de un hash del mensaje
+    \item Cifrado del hash con la clave privada (firma)
+    \item Verificación descifrando con la clave pública
 \end{enumerate}
 
 \subsection{Implementación RSA}
@@ -508,7 +512,7 @@ if __name__ == "__main__":
 \end{lstlisting}
 
 \begin{securitygoodpractice}
-	Para aplicaciones en producción, se recomienda usar claves RSA de al menos 2048 bits. Para mayor seguridad a largo plazo, considere usar 4096 bits.
+    Para aplicaciones en producción, se recomienda usar claves RSA de al menos 2048 bits. Para mayor seguridad a largo plazo, considere usar 4096 bits.
 \end{securitygoodpractice}
 
 \newpage
@@ -517,12 +521,14 @@ if __name__ == "__main__":
 
 \subsection{Fundamentos Teóricos}
 
-El cifrado simétrico utiliza la misma clave para cifrar y descifrar datos. Los algoritmos modernos como AES (Advanced Encryption Standard) operan sobre bloques de datos y requieren:
+El cifrado simétrico utiliza la misma clave para cifrar y descifrar datos. Los
+algoritmos modernos como AES (Advanced Encryption Standard) operan sobre
+bloques de datos y requieren:
 
 \begin{itemize}
-	\item \textbf{Clave secreta}: Compartida entre emisor y receptor
-	\item \textbf{Vector de inicialización (IV)}: Valor aleatorio para cada operación
-	\item \textbf{Modo de operación}: CBC, GCM, CTR, etc.
+    \item \textbf{Clave secreta}: Compartida entre emisor y receptor
+    \item \textbf{Vector de inicialización (IV)}: Valor aleatorio para cada operación
+    \item \textbf{Modo de operación}: CBC, GCM, CTR, etc.
 \end{itemize}
 
 \subsection{Implementación AES}
@@ -764,7 +770,7 @@ if __name__ == "__main__":
 \end{lstlisting}
 
 \begin{cryptoanalysis}
-	AES-GCM proporciona tanto confidencialidad como autenticidad, siendo preferible a CBC para la mayoría de aplicaciones modernas. El modo GCM detecta cualquier manipulación de los datos cifrados.
+    AES-GCM proporciona tanto confidencialidad como autenticidad, siendo preferible a CBC para la mayoría de aplicaciones modernas. El modo GCM detecta cualquier manipulación de los datos cifrados.
 \end{cryptoanalysis}
 
 \newpage
@@ -776,11 +782,12 @@ if __name__ == "__main__":
 El cifrado asimétrico utiliza un par de claves matemáticamente relacionadas:
 
 \begin{itemize}
-	\item \textbf{Clave pública}: Puede ser compartida libremente para cifrar mensajes
-	\item \textbf{Clave privada}: Debe mantenerse secreta para descifrar mensajes
+    \item \textbf{Clave pública}: Puede ser compartida libremente para cifrar mensajes
+    \item \textbf{Clave privada}: Debe mantenerse secreta para descifrar mensajes
 \end{itemize}
 
-RSA (Rivest-Shamir-Adleman) es uno de los algoritmos más utilizados, basado en la dificultad de factorizar números primos grandes.
+RSA (Rivest-Shamir-Adleman) es uno de los algoritmos más utilizados, basado en
+la dificultad de factorizar números primos grandes.
 
 \subsection{Implementación RSA para Cifrado}
 
@@ -1018,7 +1025,7 @@ if __name__ == "__main__":
 \end{lstlisting}
 
 \begin{securityalert}
-	RSA no debe usarse directamente para cifrar grandes cantidades de datos debido a limitaciones de tamaño y rendimiento. El cifrado híbrido combina la seguridad de RSA con la eficiencia de AES.
+    RSA no debe usarse directamente para cifrar grandes cantidades de datos debido a limitaciones de tamaño y rendimiento. El cifrado híbrido combina la seguridad de RSA con la eficiencia de AES.
 \end{securityalert}
 
 \newpage
@@ -1027,13 +1034,15 @@ if __name__ == "__main__":
 
 \subsection{Fundamentos Teóricos}
 
-La Criptografía de Curvas Elípticas (ECC) ofrece el mismo nivel de seguridad que RSA con claves significativamente más pequeñas. Se basa en el problema del logaritmo discreto en curvas elípticas.
+La Criptografía de Curvas Elípticas (ECC) ofrece el mismo nivel de seguridad
+que RSA con claves significativamente más pequeñas. Se basa en el problema del
+logaritmo discreto en curvas elípticas.
 
 Ventajas de ECC:
 \begin{itemize}
-	\item \textbf{Eficiencia}: Claves más pequeñas (256 bits ECC $\approx$ 3072 bits RSA)
-	\item \textbf{Rendimiento}: Operaciones más rápidas
-	\item \textbf{Menor consumo}: Ideal para dispositivos con recursos limitados
+    \item \textbf{Eficiencia}: Claves más pequeñas (256 bits ECC $\approx$ 3072 bits RSA)
+    \item \textbf{Rendimiento}: Operaciones más rápidas
+    \item \textbf{Menor consumo}: Ideal para dispositivos con recursos limitados
 \end{itemize}
 
 \subsection{Implementación ECDSA}
@@ -1281,7 +1290,7 @@ if __name__ == "__main__":
 \end{lstlisting}
 
 \begin{securitygoodpractice}
-	Para aplicaciones que requieren máxima compatibilidad, use secp256r1 (P-256). Para aplicaciones blockchain o que requieren máxima seguridad, considere secp256k1 o secp521r1.
+    Para aplicaciones que requieren máxima compatibilidad, use secp256r1 (P-256). Para aplicaciones blockchain o que requieren máxima seguridad, considere secp256k1 o secp521r1.
 \end{securitygoodpractice}
 
 \newpage
@@ -1290,7 +1299,8 @@ if __name__ == "__main__":
 
 \subsection{Implementación Completa}
 
-A continuación se presenta una implementación que integra todas las funcionalidades criptográficas en una suite unificada:
+A continuación se presenta una implementación que integra todas las
+funcionalidades criptográficas en una suite unificada:
 
 \begin{lstlisting}[caption=Suite completa de cifrado integrando todas las funcionalidades]
 import json
@@ -1498,100 +1508,274 @@ if __name__ == "__main__":
 \subsection{Comparación de Algoritmos}
 
 \begin{table}[h]
-	\centering
-	\caption{Comparación de características de algoritmos implementados}
-	\begin{tabular}{|l|c|c|c|c|}
-		\hline
-		\textbf{Algoritmo} & \textbf{Tipo} & \textbf{Tamaño Clave} & \textbf{Velocidad} & \textbf{Seguridad} \\
-		\hline
-		SHA-256            & Hash          & N/A                   & Muy Alta           & Alta               \\
-		SHA-512            & Hash          & N/A                   & Alta               & Muy Alta           \\
-		AES-256            & Simétrico     & 256 bits              & Muy Alta           & Muy Alta           \\
-		RSA-2048           & Asimétrico    & 2048 bits             & Baja               & Alta               \\
-		RSA-4096           & Asimétrico    & 4096 bits             & Muy Baja           & Muy Alta           \\
-		ECC-P256           & Asimétrico    & 256 bits              & Alta               & Alta               \\
-		ECC-P521           & Asimétrico    & 521 bits              & Media              & Muy Alta           \\
-		\hline
-	\end{tabular}
+    \centering
+    \caption{Comparación de características de algoritmos implementados}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Algoritmo} & \textbf{Tipo} & \textbf{Tamaño Clave} & \textbf{Velocidad} & \textbf{Seguridad} \\
+        \hline
+        SHA-256            & Hash          & N/A                   & Muy Alta           & Alta               \\
+        SHA-512            & Hash          & N/A                   & Alta               & Muy Alta           \\
+        AES-256            & Simétrico     & 256 bits              & Muy Alta           & Muy Alta           \\
+        RSA-2048           & Asimétrico    & 2048 bits             & Baja               & Alta               \\
+        RSA-4096           & Asimétrico    & 4096 bits             & Muy Baja           & Muy Alta           \\
+        ECC-P256           & Asimétrico    & 256 bits              & Alta               & Alta               \\
+        ECC-P521           & Asimétrico    & 521 bits              & Media              & Muy Alta           \\
+        \hline
+    \end{tabular}
 \end{table}
 
 \subsection{Recomendaciones de Uso}
 
 \begin{securitygoodpractice}
-	\textbf{Mejores Prácticas para Implementaciones Criptográficas:}
-	\begin{itemize}
-		\item Usar SHA-256 o superior para funciones hash
-		\item Implementar AES-256 con GCM para cifrado autenticado
-		\item Preferir ECC sobre RSA para nuevas aplicaciones
-		\item Siempre usar generadores de números aleatorios criptográficamente seguros
-		\item Mantener las claves privadas protegidas y nunca hardcodearlas
-	\end{itemize}
+    \textbf{Mejores Prácticas para Implementaciones Criptográficas:}
+    \begin{itemize}
+        \item Usar SHA-256 o superior para funciones hash
+        \item Implementar AES-256 con GCM para cifrado autenticado
+        \item Preferir ECC sobre RSA para nuevas aplicaciones
+        \item Siempre usar generadores de números aleatorios criptográficamente seguros
+        \item Mantener las claves privadas protegidas y nunca hardcodearlas
+    \end{itemize}
 \end{securitygoodpractice}
 
 \subsection{Casos de Uso Recomendados}
 
 \begin{itemize}
-	\item \textbf{Integridad de datos}: SHA-256/SHA-512
-	\item \textbf{Cifrado de archivos}: AES-256-GCM
-	\item \textbf{Autenticación de mensajes}: ECDSA con P-256
-	\item \textbf{Intercambio de claves}: ECDH
-	\item \textbf{Cifrado de comunicaciones}: Híbrido (RSA/ECC + AES)
+    \item \textbf{Integridad de datos}: SHA-256/SHA-512
+    \item \textbf{Cifrado de archivos}: AES-256-GCM
+    \item \textbf{Autenticación de mensajes}: ECDSA con P-256
+    \item \textbf{Intercambio de claves}: ECDH
+    \item \textbf{Cifrado de comunicaciones}: Híbrido (RSA/ECC + AES)
 \end{itemize}
+
+% ------------------------------------
+\section{Módulo para Filtrado y Prevención de Ataques de Inyección SQL: Detección de Vulnerabilidades y Aplicación de Contramedidas}
+
+\subsection{Configuración del Entorno de Pruebas}
+
+En nuestro Kali Linux iniciamos el servicio de Apache y MySQL, procedemos a
+verificar que el servicio de MySQL esté ejecutándose correctamente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img1.png}
+    \caption{Verificación del estado de los servicios}
+    \label{fig:servicios-estado}
+\end{figure}
+
+Ejecutamos el servicio de MySQL como usuario root:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img2.png}
+    \caption{Acceso a MySQL como root}
+    \label{fig:mysql-root}
+\end{figure}
+
+Creamos una base de datos para las pruebas:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img3.png}
+    \caption{Creación de base de datos de prueba}
+    \label{fig:db-creacion}
+\end{figure}
+
+\subsection{Implementación del Módulo de Seguridad}
+
+**Archivo config.php - Módulo de Seguridad SQL**
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./assets/img4.png}
+    \caption{Implementación del módulo de seguridad contra SQL Injection}
+    \label{fig:config-seguridad}
+\end{figure}
+
+Este archivo implementa las defensas contra SQL Injection e incluye:
+
+\begin{itemize}
+    \item Detección de patrones maliciosos (como UNION SELECT, DROP TABLE, comentarios
+          --)
+    \item Escapado seguro de caracteres usando PDO::quote()
+    \item Prepared statements con safeQuery(), que separa datos de código SQL
+    \item Registro de intentos de ataque en logs para auditoría
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./assets/img5.png}
+    \caption{Código PHP - Funciones de seguridad (Parte 1)}
+    \label{fig:php-seguridad-1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./assets/img6.png}
+    \caption{Código PHP - Funciones de seguridad (Parte 2)}
+    \label{fig:php-seguridad-2}
+\end{figure}
+
+\subsection{Comparación: Código Vulnerable vs Código Seguro}
+
+\**Login\_vulnerable.php** - Demuestra qué NO hacer: concatena inputs directamente en la consulta SQL sin sanitización, permitiendo que ataques como \texttt{admin' --} bypassen la autenticación. Muestra la consulta generada para evidenciar cómo la inyección modifica la lógica original (ej.: omite la verificación de contraseña). Es útil solo con fines educativos.
+
+**Login\_seguro.php** - Aplica las contramedidas del módulo de seguridad:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./assets/img7.png}
+    \caption{Login seguro - Implementación de contramedidas}
+    \label{fig:login-seguro}
+\end{figure}
+
+Las características del login seguro incluyen:
+
+\begin{itemize}
+    \item Filtra inputs con \texttt{detectInjection()} (bloquea ataques conocidos)
+    \item Usa prepared statements (\texttt{safeQuery()}) donde los parámetros se enlazan
+          de forma segura
+    \item Nunca ejecuta inputs como código SQL, evitando que ataques como \texttt{' OR
+              1=1} tengan efecto
+    \item Muestra la consulta "original" (con inputs) solo para comparación didáctica
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./assets/img8.png}
+    \caption{Código PHP - Implementación completa del login seguro}
+    \label{fig:php-login-completo}
+\end{figure}
+
+\subsection{Pruebas de Vulnerabilidad}
+
+Accedemos al servidor de Apache con \texttt{localhost/index.html}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img9.png}
+    \caption{Interfaz web de pruebas}
+    \label{fig:interfaz-web}
+\end{figure}
+
+\subsubsection{Pruebas en el Sistema Vulnerable}
+
+Probamos el caso vulnerable con los siguientes datos:
+
+\begin{lstlisting}[caption=Ataque SQL Injection - UNION SELECT]
+Usuario: ' UNION SELECT 1, 'hacker', 'hash'-- 
+Contraseña: [cualquier cosa]
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img10.png}
+    \caption{Resultado del ataque UNION SELECT en sistema vulnerable}
+    \label{fig:ataque-union}
+\end{figure}
+
+Segunda prueba con bypass de autenticación:
+
+\begin{lstlisting}[caption=Ataque SQL Injection - Bypass de autenticación]
+Usuario: ' OR '1'='1
+Contraseña: [cualquier cosa]
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img11.png}
+    \caption{Resultado del bypass de autenticación en sistema vulnerable}
+    \label{fig:bypass-vulnerable}
+\end{figure}
+
+\subsubsection{Pruebas en el Sistema Protegido}
+
+Probamos los mismos ataques en el login protegido:
+
+\begin{lstlisting}[caption=Intento de ataque UNION SELECT en sistema protegido]
+Usuario: ' UNION SELECT 1, 'hacker', 'hash'-- 
+Contraseña: [cualquier cosa]
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img12.png}
+    \caption{Bloqueo del ataque UNION SELECT en sistema protegido}
+    \label{fig:proteccion-union}
+\end{figure}
+
+Segundo intento de ataque:
+
+\begin{lstlisting}[caption=Intento de bypass en sistema protegido]
+Usuario: ' OR '1'='1
+Contraseña: [cualquier cosa]
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./assets/img13.png}
+    \caption{Bloqueo del bypass de autenticación en sistema protegido}
+    \label{fig:proteccion-bypass}
+\end{figure}
+
+% ------------------------------------
 
 \section{Conclusiones}
 
-Este laboratorio ha presentado implementaciones prácticas de los principales algoritmos criptográficos utilizados en la seguridad informática moderna. Las implementaciones demuestran:
+Este laboratorio ha presentado implementaciones prácticas de los principales
+algoritmos criptográficos utilizados en la seguridad informática moderna. Las
+implementaciones demuestran:
 
 \begin{enumerate}
-	\item La importancia de utilizar bibliotecas criptográficas probadas y seguras
-	\item La necesidad de comprender las fortalezas y limitaciones de cada algoritmo
-	\item La aplicación correcta de esquemas criptográficos para diferentes casos de uso
-	\item La integración de múltiples técnicas para lograr seguridad completa
+    \item La importancia de utilizar bibliotecas criptográficas probadas y seguras
+    \item La necesidad de comprender las fortalezas y limitaciones de cada algoritmo
+    \item La aplicación correcta de esquemas criptográficos para diferentes casos de uso
+    \item La integración de múltiples técnicas para lograr seguridad completa
 \end{enumerate}
 
 \begin{securityalert}
-	Estas implementaciones son con fines educativos. Para aplicaciones en producción, se recomienda realizar auditorías de seguridad adicionales y seguir los estándares de la industria como NIST y OWASP.
+    Estas implementaciones son con fines educativos. Para aplicaciones en producción, se recomienda realizar auditorías de seguridad adicionales y seguir los estándares de la industria como NIST y OWASP.
 \end{securityalert}
 
 \section{Referencias}
 
 \begin{thebibliography}{9}
 
-	\bibitem{nist2023}
-	NIST,
-	\textit{Recommendation for Key Management},
-	Special Publication 800-57 Part 1 Rev. 5,
-	2023.
+    \bibitem{nist2023}
+    NIST,
+    \textit{Recommendation for Key Management},
+    Special Publication 800-57 Part 1 Rev. 5,
+    2023.
 
-	\bibitem{ferguson2010}
-	N. Ferguson, B. Schneier, T. Kohno,
-	\textit{Cryptography Engineering: Design Principles and Practical Applications},
-	Wiley Publishing,
-	2010.
+    \bibitem{ferguson2010}
+    N. Ferguson, B. Schneier, T. Kohno,
+    \textit{Cryptography Engineering: Design Principles and Practical Applications},
+    Wiley Publishing,
+    2010.
 
-	\bibitem{katz2014}
-	J. Katz, Y. Lindell,
-	\textit{Introduction to Modern Cryptography},
-	Chapman and Hall/CRC,
-	2nd Edition, 2014.
+    \bibitem{katz2014}
+    J. Katz, Y. Lindell,
+    \textit{Introduction to Modern Cryptography},
+    Chapman and Hall/CRC,
+    2nd Edition, 2014.
 
-	\bibitem{menezes2018}
-	A. Menezes, P. van Oorschot, S. Vanstone,
-	\textit{Handbook of Applied Cryptography},
-	CRC Press,
-	2018.
+    \bibitem{menezes2018}
+    A. Menezes, P. van Oorschot, S. Vanstone,
+    \textit{Handbook of Applied Cryptography},
+    CRC Press,
+    2018.
 
-	\bibitem{bernstein2009}
-	D. Bernstein, T. Lange,
-	\textit{Curve25519: New Diffie-Hellman Speed Records},
-	Public Key Cryptography - PKC 2006,
-	2009.
+    \bibitem{bernstein2009}
+    D. Bernstein, T. Lange,
+    \textit{Curve25519: New Diffie-Hellman Speed Records},
+    Public Key Cryptography - PKC 2006,
+    2009.
 
-	\bibitem{cryptography2024}
-	Python Cryptography Developers,
-	\textit{Cryptography Documentation},
-	\url{https://cryptography.io/en/latest/},
-	2024.
+    \bibitem{cryptography2024}
+    Python Cryptography Developers,
+    \textit{Cryptography Documentation},
+    \url{https://cryptography.io/en/latest/},
+    2024.
 
 \end{thebibliography}
 
@@ -1599,7 +1783,9 @@ Este laboratorio ha presentado implementaciones prácticas de los principales al
 
 \section{Código Fuente Completo}
 
-El código fuente completo de todas las implementaciones presentadas en este laboratorio está disponible en el repositorio del curso. Para ejecutar los ejemplos:
+El código fuente completo de todas las implementaciones presentadas en este
+laboratorio está disponible en el repositorio del curso. Para ejecutar los
+ejemplos:
 
 \begin{lstlisting}[language=bash, caption=Instalación y ejecución]
 # Clonar repositorio
@@ -1622,19 +1808,23 @@ python elliptic_curve.py
 \section{Glosario}
 
 \begin{description}
-	\item[AES] Advanced Encryption Standard - Estándar de cifrado simétrico
-	\item[CBC] Cipher Block Chaining - Modo de operación de cifrado por bloques
-	\item[ECC] Elliptic Curve Cryptography - Criptografía de curvas elípticas
-	\item[ECDH] Elliptic Curve Diffie-Hellman - Intercambio de claves con curvas elípticas
-	\item[ECDSA] Elliptic Curve Digital Signature Algorithm - Algoritmo de firma digital con curvas elípticas
-	\item[GCM] Galois/Counter Mode - Modo de cifrado autenticado
-	\item[Hash] Función que mapea datos de tamaño arbitrario a tamaño fijo
-	\item[HMAC] Hash-based Message Authentication Code - Código de autenticación basado en hash
-	\item[IV] Initialization Vector - Vector de inicialización
-	\item[OAEP] Optimal Asymmetric Encryption Padding - Esquema de padding para RSA
-	\item[PKCS] Public Key Cryptography Standards - Estándares de criptografía de clave pública
-	\item[RSA] Rivest-Shamir-Adleman - Algoritmo de cifrado asimétrico
-	\item[SHA] Secure Hash Algorithm - Algoritmo de hash seguro
+    \item[AES] Advanced Encryption Standard - Estándar de cifrado simétrico
+    \item[CBC] Cipher Block Chaining - Modo de operación de cifrado por bloques
+    \item[ECC] Elliptic Curve Cryptography - Criptografía de curvas elípticas
+    \item[ECDH] Elliptic Curve Diffie-Hellman - Intercambio de claves con curvas
+          elípticas
+    \item[ECDSA] Elliptic Curve Digital Signature Algorithm - Algoritmo de firma digital
+          con curvas elípticas
+    \item[GCM] Galois/Counter Mode - Modo de cifrado autenticado
+    \item[Hash] Función que mapea datos de tamaño arbitrario a tamaño fijo
+    \item[HMAC] Hash-based Message Authentication Code - Código de autenticación basado
+          en hash
+    \item[IV] Initialization Vector - Vector de inicialización
+    \item[OAEP] Optimal Asymmetric Encryption Padding - Esquema de padding para RSA
+    \item[PKCS] Public Key Cryptography Standards - Estándares de criptografía de clave
+          pública
+    \item[RSA] Rivest-Shamir-Adleman - Algoritmo de cifrado asimétrico
+    \item[SHA] Secure Hash Algorithm - Algoritmo de hash seguro
 \end{description}
 
 \end{document}
