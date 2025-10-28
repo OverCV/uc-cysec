@@ -7,7 +7,17 @@
 *.out
 *.gz
 *.fdb_latexmk
-*.pdf
+# *.pdf
+*.acn
+*.bbl
+*.bcf
+*.blg
+*.glo
+*.xml
+*.ist
+*.toc
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
